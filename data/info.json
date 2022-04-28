@@ -1,0 +1,212 @@
+{
+  "Wilderness Areas": [
+    {
+      "area": 1,
+      "name": "Rawah Wilderness Area"
+    },
+    {
+      "area": 2,
+      "name": "Neota Wilderness Area"
+    },
+    {
+      "area": 3,
+      "name": "Comanche Peak Wilderness Area"
+    },
+    {
+      "area": 4,
+      "name": "Cache la Poudre Wilderness Area"
+    }
+  ],
+  "Soil type": [
+    {
+      "type": 1,
+      "name": "Cathedral family - Rock outcrop complex, extremely stony."
+    },
+    {
+      "type": 2,
+      "name": "Vanet - Ratake families complex, very stony."
+    },
+    {
+      "type": 3,
+      "name": "Haploborolis - Rock outcrop complex, rubbly."
+    },
+    {
+      "type": 4,
+      "name": "Ratake family - Rock outcrop complex, rubbly."
+    },
+    {
+      "type": 5,
+      "name": "Vanet family - Rock outcrop complex complex, rubbly."
+    },
+    {
+      "type": 6,
+      "name": "Vanet - Wetmore families - Rock outcrop complex, stony."
+    },
+    {
+      "type": 7,
+      "name": "Gothic family."
+    },
+    {
+      "type": 8,
+      "name": "Supervisor - Limber families complex."
+    },
+    {
+      "type": 9,
+      "name": "Troutville family, very stony."
+    },
+    {
+      "type": 10,
+      "name": "Bullwark - Catamount families - Rock outcrop complex, rubbly."
+    },
+    {
+      "type": 11,
+      "name": "Bullwark - Catamount families - Rock land complex, rubbly."
+    },
+    {
+      "type": 12,
+      "name": "Legault family - Rock land complex, stony."
+    },
+    {
+      "type": 13,
+      "name": "Catamount family - Rock land - Bullwark family complex, rubbly."
+    },
+    {
+      "type": 14,
+      "name": "Pachic Argiborolis - Aquolis complex."
+    },
+    {
+      "type": 15,
+      "name": "unspecified in the USFS Soil and ELU Survey."
+    },
+    {
+      "type": 16,
+      "name": "Cryaquolis - Cryoborolis complex."
+    },
+    {
+      "type": 17,
+      "name": "Gateview family - Cryaquolis complex."
+    },
+    {
+      "type": 18,
+      "name": "Rogert family, very stony."
+    },
+    {
+      "type": 19,
+      "name": "Typic Cryaquolis - Borohemists complex."
+    },
+    {
+      "type": 20,
+      "name": "Typic Cryaquepts - Typic Cryaquolls complex."
+    },
+    {
+      "type": 21,
+      "name": "Typic Cryaquolls - Leighcan family, till substratum complex."
+    },
+    {
+      "type": 22,
+      "name": "Leighcan family, till substratum, extremely bouldery."
+    },
+    {
+      "type": 23,
+      "name": "Leighcan family, till substratum - Typic Cryaquolls complex."
+    },
+    {
+      "type": 24,
+      "name": "Leighcan family, extremely stony."
+    },
+    {
+      "type": 25,
+      "name": "Leighcan family, warm, extremely stony."
+    },
+    {
+      "type": 26,
+      "name": "Granile - Catamount families complex, very stony."
+    },
+    {
+      "type": 27,
+      "name": "Leighcan family, warm - Rock outcrop complex, extremely stony."
+    },
+    {
+      "type": 28,
+      "name": "Leighcan family - Rock outcrop complex, extremely stony."
+    },
+    {
+      "type": 29,
+      "name": "Como - Legault families complex, extremely stony."
+    },
+    {
+      "type": 30,
+      "name": "Como family - Rock land - Legault family complex, extremely stony."
+    },
+    {
+      "type": 31,
+      "name": "Leighcan - Catamount families complex, extremely stony."
+    },
+    {
+      "type": 32,
+      "name": "Catamount family - Rock outcrop - Leighcan family complex, extremely stony."
+    },
+    {
+      "type": 33,
+      "name": "Leighcan - Catamount families - Rock outcrop complex, extremely stony."
+    },
+    {
+      "type": 34,
+      "name": "Cryorthents - Rock land complex, extremely stony."
+    },
+    {
+      "type": 35,
+      "name": "Cryumbrepts - Rock outcrop - Cryaquepts complex."
+    },
+    {
+      "type": 36,
+      "name": "Bross family - Rock land - Cryumbrepts complex, extremely stony."
+    },
+    {
+      "type": 37,
+      "name": "Rock outcrop - Cryumbrepts - Cryorthents complex, extremely stony."
+    },
+    {
+      "type": 38,
+      "name": "Leighcan - Moran families - Cryaquolls complex, extremely stony."
+    },
+    {
+      "type": 39,
+      "name": "Moran family - Cryorthents - Leighcan family complex, extremely stony."
+    },
+    {
+      "type": 40,
+      "name": "Moran family - Cryorthents - Rock land complex, extremely stony."
+    }
+  ],
+  "Forest Cover Type Classes": [
+    {
+      "type": 1,
+      "name": "Spruce/Fir"
+    },
+    {
+      "type": 2,
+      "name": "Lodgepole Pine"
+    },
+    {
+      "type": 3,
+      "name": "Ponderosa Pine"
+    },
+    {
+      "type": 4,
+      "name": "Cottonwood/Willow"
+    },
+    {
+      "type": 5,
+      "name": "Aspen"
+    },
+    {
+      "type": 6,
+      "name": "Douglas-fir"
+    },
+    {
+      "type": 7,
+      "name": "Krummholz"
+    }
+  ]
+}

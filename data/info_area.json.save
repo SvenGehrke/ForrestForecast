@@ -1,0 +1,20 @@
+{
+  "Wilderness Areas": [
+    {
+      "area": 1,
+      "name": "Rawah Wilderness Area"
+    },
+    {
+      "area": 2,
+      "name": "Neota Wilderness Area"
+    },
+    {
+      "area": 3,
+      "name": "Comanche Peak Wilderness Area"
+    },
+    {
+      "area": 4,
+      "name": "Cache la Poudre Wilderness Area"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "Forest Cover Type Classes": [
+    {
+      "type": 1,
+      "name": "Spruce/Fir"
+    },
+    {
+      "type": 2,
+      "name": "Lodgepole Pine"
+    },
+    {
+      "type": 3,
+      "name": "Ponderosa Pine"
+    },
+    {
+      "type": 4,
+      "name": "Cottonwood/Willow"
+    },
+    {
+      "type": 5,
+      "name": "Aspen"
+    },
+    {
+      "type": 6,
+      "name": "Douglas-fir"
+    },
+    {
+      "type": 7,
+      "name": "Krummholz"
+    }
+  ]
+}

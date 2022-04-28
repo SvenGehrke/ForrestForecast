@@ -1,0 +1,330 @@
+{
+  "column1": {
+    "name": "Elevation",
+    "Data Type": "quantitative",
+    "Measurement": "meters",
+    "Description": "Elevation in meters"
+  },
+  "column2": {
+    "name": "Aspect",
+    "Data Type": "quantitative",
+    "Measurement": "azimuth",
+    "Description": "Aspect in degrees azimuth"
+  },
+  "column3": {
+    "name": "Slope",
+    "Data Type": "quantitative",
+    "Measurement": "degrees",
+    "Description": "Slope in degrees"
+  },
+  "column4": {
+    "name": "Horizontal_Distance_To_Hydrology",
+    "Data Type": "quantitative",
+    "Measurement": "meters",
+    "Description": "Horz Dist to nearest surface water features"
+  },
+  "column5": {
+    "name": "Vertical_Distance_To_Hydrology",
+    "Data Type": "quantitative",
+    "Measurement": "meters",
+    "Description": "Vert Dist to nearest surface water features"
+  },
+  "column6": {
+    "name": "Horizontal_Distance_To_Roadways",
+    "Data Type": "quantitative",
+    "Measurement": "meters",
+    "Description": "Horz  Dist  to  nearest roadway"
+  },
+  "column7": {
+    "name": "Hillshade_9am",
+    "Data Type": "quantitative",
+    "Measurement": "0 to 255 index",
+    "Description": "Hillshade index at 9am summer solstice"
+  },
+  "column8": {
+    "name": "Hillshade_Noon",
+    "Data Type": "quantitative",
+    "Measurement": "0 to 255 index",
+    "Description": "Hillshade index at noon summer soltice"
+  },
+  "column9": {
+    "name": "Hillshade_3pm",
+    "Data Type": "quantitative",
+    "Measurement": "0 to 255 index Hillshade index at 3pm summer solstice"
+  },
+  "column10": {
+    "name": "Horizontal_Distance_To_Fire_Points",
+    "Data Type": "quantitative",
+    "Measurement": "meters",
+    "Description": "Horz Dist to nearest wildfire ignition points"
+  },
+  "column11": {
+    "name": "Wilderness_Area, Rawah Wilderness Area",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Wilderness area designation"
+  },
+  "column12": {
+    "name": "Wilderness_Area, Neota Wilderness Area",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Wilderness area designation"
+  },
+  "column13": {
+    "name": "Wilderness_Area, Comanche Peak Wilderness Area",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Wilderness area designation"
+  },
+  "column14": {
+    "name": "Wilderness_Area, Cache la Poudre Wilderness Area",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Wilderness area designation"
+  },
+  "column15": {
+    "name": "Soil_Type, Cathedral family - Rock outcrop complex, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column16": {
+    "name": "Soil_Type, Vanet - Ratake families complex, very stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column17": {
+    "name": "Soil_Type, Haploborolis - Rock outcrop complex, rubbly.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column18": {
+    "name": "Soil_Type, Ratake family - Rock outcrop complex, rubbly.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column19": {
+    "name": "Soil_Type, Vanet family - Rock outcrop complex complex, rubbly.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column20": {
+    "name": "Soil_Type, Vanet - Wetmore families - Rock outcrop complex, stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column21": {
+    "name": "Soil_Type, Gothic family.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column22": {
+    "name": "Soil_Type, Supervisor - Limber families complex.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column23": {
+    "name": "Soil_Type, Troutville family, very stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column24": {
+    "name": "Soil_Type, Bullwark - Catamount families - Rock outcrop complex, rubbly.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column25": {
+    "name": "Soil_Type, Bullwark - Catamount families - Rock land complex, rubbly.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column26": {
+    "name": "Soil_Type, Legault family - Rock land complex, stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column27": {
+    "name": "Soil_Type, Catamount family - Rock land - Bullwark family complex, rubbly.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column28": {
+    "name": "Soil_Type, Pachic Argiborolis - Aquolis complex.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column29": {
+    "name": "Soil_Type, unspecified in the USFS Soil and ELU Survey.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column30": {
+    "name": "Soil_Type, Cryaquolis - Cryoborolis complex.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column31": {
+    "name": "Soil_Type, Gateview family - Cryaquolis complex.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column32": {
+    "name": "Soil_Type, Rogert family, very stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column33": {
+    "name": "Soil_Type, Typic Cryaquolis - Borohemists complex.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column34": {
+    "name": "Soil_Type, Typic Cryaquepts - Typic Cryaquolls complex.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column35": {
+    "name": "Soil_Type, Typic Cryaquolls - Leighcan family, till substratum complex.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column36": {
+    "name": "Soil_Type, Leighcan family, till substratum, extremely bouldery.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column37": {
+    "name": "Soil_Type, Leighcan family, till substratum - Typic Cryaquolls complex.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column38": {
+    "name": "Soil_Type, Leighcan family, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column39": {
+    "name": "Soil_Type, Leighcan family, warm, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column40": {
+    "name": "Soil_Type, Granile - Catamount families complex, very stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column41": {
+    "name": "Soil_Type, Leighcan family, warm - Rock outcrop complex, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column42": {
+    "name": "Soil_Type, Leighcan family - Rock outcrop complex, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column43": {
+    "name": "Soil_Type, Como - Legault families complex, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column44": {
+    "name": "Soil_Type, Como family - Rock land - Legault family complex, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column45": {
+    "name": "Soil_Type, Leighcan - Catamount families complex, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column46": {
+    "name": "Soil_Type, Catamount family - Rock outcrop - Leighcan family complex, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column47": {
+    "name": "Soil_Type, Leighcan - Catamount families - Rock outcrop complex, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column48": {
+    "name": "Soil_Type, Cryorthents - Rock land complex, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column49": {
+    "name": "Soil_Type, Cryumbrepts - Rock outcrop - Cryaquepts complex.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column50": {
+    "name": "Soil_Type, Bross family - Rock land - Cryumbrepts complex, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column51": {
+    "name": "Soil_Type, Rock outcrop - Cryumbrepts - Cryorthents complex, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column52": {
+    "name": "Soil_Type, Leighcan - Moran families - Cryaquolls complex, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column53": {
+    "name": "Soil_Type, Moran family - Cryorthents - Leighcan family complex, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column54": {
+    "name": "Soil_Type, Moran family - Cryorthents - Rock land complex, extremely stony.",
+    "Data Type": "qualitative",
+    "Measurement": "0 (absence) or 1 (presence)",
+    "Description": "Soil Type designation"
+  },
+  "column55": {
+    "name": "Cover_Type, (7 types)",
+    "Data Type": "integer",
+    "Measurement": "1 to 7 Forest Cover Type designation"
+  }
+}
