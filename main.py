@@ -1,4 +1,4 @@
-import keras as tf
+from tensorflow import keras
 from sklearn.model_selection import train_test_split
 
 import pandas as pd
@@ -7,7 +7,7 @@ import pickle
 import sys
 import os
 import shutil
-import columnize
+from columnize import columnize
 import matplotlib.pyplot as plt
 
 
@@ -25,8 +25,8 @@ class Model():
 		try:
 			self.dir_models_ = os.path.join(self.dir_home_, 'models')
 			if os.listdir(path=self.dir_models_)!=[]:
-				print(os.listdir(path=self.dir_models_))
-				# print(columnize(os.listdir(path=self.dir_models_)))
+				#print(os.listdir(path=self.dir_models_))
+				print(columnize(sorted(os.listdir(path=self.dir_models_))))
 				s = 'y'
 				s = input("Should previous models be purged? [Y/n]")
 				if s.lower() == 'y':
@@ -36,10 +36,24 @@ class Model():
 						for d in dirs:
 							shutil.rmtree(os.path.join(root, d))
 				os.mkdir(self.dir_models_)
-
 		except:
-
 			pass
+		finally:
+			list = sorted(os.listdir(path=self.dir_models_))
+			if list !=[]:
+				start = list[-1].find('_')+1
+				end = list[-1][start:].find('_')
+				run = int(list[-1][start:start+end])+1
+			else:
+				run=1
+			self.run = "{:06d}".format(run)
+
+		try:
+			self.dir_models_best_ = os.path.join(self.dir_home_, 'models_best')
+			os.mkdir(self.dir_models_best_)
+		except:
+			pass
+
 
 	def data_load(self):
 		file = os.path.join(self.dir_home_, "data", "info.json")
@@ -63,29 +77,56 @@ class Model():
 		# self.covtype_=df
 		return self.covtype_
 
-	def model_setup(self, data=None):
+	def model_plot(self, history=None, step=1):
+		# list all data in history
+		print(history.history.keys())
+		# summarize history for accuracy
+		plt.plot(history.history['accuracy'])
+		plt.plot(history.history['val_accuracy'])
+		plt.title('model accuracy')
+		plt.ylabel('accuracy')
+		plt.xlabel('epoch')
+		plt.legend(['train', 'test'], loc='upper left')
+
+		file = os.path.join(self.dir_models_best_, f'run_{self.run}_{step}_model_accuracy.png')
+		plt.savefig(file, format='png')
+		plt.show()
+		# summarize history for loss
+		plt.plot(history.history['loss'])
+		plt.plot(history.history['val_loss'])
+		plt.title('model loss')
+		plt.ylabel('loss')
+		plt.xlabel('epoch')
+		plt.legend(['train', 'test'], loc='upper left')
+
+		file = os.path.join(self.dir_models_best_, f'run_{self.run}_{step}_model_loss.png')
+		plt.savefig(file, format='png')
+		plt.show()
+
+	def model_setup_train(self, data=None):
 		input_shape_ = len(data.columns) - 1
 		output_shape_ = data.iloc[:,-1].nunique()
 
-
-		input_tensor = tf.layers.Input(shape=(input_shape_,))
-		# output_tensor = tf.layers.Dense(units=output_shape)(input_tensor)
-		model_ = tf.models.Sequential()
+		input_tensor = keras.layers.Input(shape=(input_shape_,))
+		# output_tensor = keras.layers.Dense(units=output_shape)(input_tensor)
+		model_ = keras.models.Sequential()
 		model_.add(input_tensor)
-		for i in range(1, 10,1):
-			model_.add(tf.layers.Dense(
+		for i in range(1, 4,1):
+			model_.add(keras.layers.Dense(
 				input_shape_,
 				input_shape=(input_shape_,),
 				activation="relu"))
 
-		model_.add(tf.layers.Dense(
+		model_.add(keras.layers.Dense(
 			output_shape_,
 			input_shape=(input_shape_,),
 			activation="softmax")
 		)
 
+		optimizer = keras.optimizers.Adam(learning_rate=0.01)
+
 		model_.compile(
-			optimizer='adam',
+			optimizer=optimizer,
 			# loss='mean_absolute_error',
 			#loss='',
 			loss='kullback_leibler_divergence',
@@ -93,20 +134,19 @@ class Model():
 		)
 
 		file = os.path.join(self.dir_results_, 'model.png')
-		tf.utils.vis_utils.plot_model(model_, to_file=file)
+		keras.utils.plot_model(model_, to_file=file)
 
 		df = pd.DataFrame(model_.summary())
-		file = os.path.join(self.dir_results_, 'model.txt')
+		file = os.path.join(self.dir_results_, f'run_{self.run}_model.txt')
 		df.to_csv(file)
 
-		return model_
-
-	def model_fit(self, X_train=None, y_train=None, model=None):
-		epochs = int(pow(y_train.nunique(),3))
+		epochs = int(pow(data.iloc[:,-1].nunique(),2))
+		# epochs = 3
+		optimizer.learning_rate.assign(0.01)
 
 		# checkpoint
-		filepath = os.path.join(self.dir_models_, "weights-improvement-{epoch:02d}-{val_accuracy:.2f}.hdf5")
-		checkpoint = tf.callbacks.ModelCheckpoint(
+		filepath = os.path.join(self.dir_models_,  f"run_{self.run}"+"_weights-improvement-{val_accuracy:.3f}-{epoch:04d}.hdf5")
+		checkpoint = keras.callbacks.ModelCheckpoint(
 			filepath,
 			monitor='val_accuracy',
 			verbose=1,
@@ -115,20 +155,36 @@ class Model():
 		)
 		callbacks_list = [checkpoint]
 
-		model.fit(
-			X_train,
-		    y_train,
+		print("Learning rate before first fit:", model_.optimizer.learning_rate.numpy())
+
+		history_= model_.fit(
+			data.iloc[:,:-1],
+		    data.iloc[:, -1],
 			epochs=epochs,
 			batch_size=128,
 			validation_split=.2,
 			callbacks=callbacks_list,
 			verbose=True
 		)
+		self.model_plot(history=history_, step=1)
 
-		return model
 
-	def model_evaluate(self, X_test=None, y_test=None, model=None):
-		print(model.evaluate(X_test, y_test, verbose=False))
+		optimizer.learning_rate.assign(0.001)
+		print("Learning rate after first fit:", model_.optimizer.learning_rate.numpy())
+
+		history_ = model_.fit(
+			data.iloc[:,:-1],
+			data.iloc[:,-1],
+			epochs=epochs,
+			batch_size=64,
+			validation_split=.2,
+			callbacks=callbacks_list,
+			verbose=True
+		)
+
+		self.model_plot(history=history_, step=2)
+
+		return model_
 
 	def model_load(self, model=None):
 		try:
@@ -163,8 +219,6 @@ class Model():
 if __name__ == "__main__":
 	project = Model()
 	data = project.data_load()
-	model = project.model_setup(data=data)
-	X_train, X_test, y_train, y_test = train_test_split(data.iloc[:, :-1], data.iloc[:, -1:], test_size=0.1,
-	                                                    random_state=42)
-	model = project.model_fit(X_train=X_train, y_train=y_train, model=model)
-	project.model_evaluate(X_test=X_test, y_test=y_test, model=model)
+	# X_train, X_test, y_train, y_test = train_test_split(data.iloc[:, :-1], data.iloc[:, -1:], test_size=0.1,random_state=42)
+
+	model = project.model_setup_train(data=data)
